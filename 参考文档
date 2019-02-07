@@ -1,0 +1,46 @@
+1. 说明
+
+    Cmder：Windows下的终端模拟器。
+    Gow： Windows下模拟Linux命令行工具集合。可以在windows执行linux下的大部分命令，如ls、grep、xargs等。
+
+2. 下载
+
+    Cmder官网：http://cmder.net/。Cmder有mini与full版；full版本内键了Git for Windows的标准配备，可以在Cmder里面执行git相关命令。
+    Gow：https://github.com/bmatzelle/gow/releases。Gow请下载最新版本Gow-0.8.0.exe
+
+3. 安装
+
+    Cmder：下载之后直接解压缩文件包。然后双击Cmd.exe即可。请不要将cmder存放于任何包含中文的目录。
+    Gow： 双击安装。
+
+4. 使用
+4.1. 添加 cmder 到右键菜单
+
+    假设Cmder.exe位于E:\tools\cmder\cmder.exe，右键以管理员权限打开终端，然后在命令行输入E:\tools\cmder\cmder.exe /REGISTER ALL。接下来进入任意目录，就可以右键开启cmder。界面显示如下：
+
+这里写图片描述
+
+    点击Cmder的顶部，然后选择Settings->Startup->Specified name task 。请选择{bash::bash}。
+
+    底部参数，请把最后的-new conlole替换成-new_console:d:%CMDER_START%。如图所示：
+
+这里写图片描述
+4.2. 打开多个窗口
+
+    在Cmder窗口界面，按快捷键ctrl + t可以创建新的窗口。
+    可以选择当前终端的类型，请保持默认bash::bash。
+    勾选to right或者to bottom,同一个窗口里面会显示两个终端分别位于右边或者底部。
+
+效果图
+这里写图片描述
+4.3. 复制粘贴
+
+鼠标左键全选复制，右键粘贴。
+4.4. 执行linux命令
+
+可以使用如下类似命令：
+
+ls
+cd ../../
+adb shell getprop | grep build
+find
